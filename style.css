@@ -101,27 +101,43 @@ section {
 
 
 
+/* ====== PREMIUM NAVBAR — GOLD & GLASS ====== */
 .navbar-wrapper {
-  position: sticky;           /* This makes it stick when you scroll */
-  top: 0;                     /* Sticks to the very top */
-  z-index: 1000;              /* Stays above everything */
-  background: rgba(227, 226, 212, 0.826);   /* ← Change this line for any background you want */
-  backdrop-filter: blur(5px);        /* Frosted glass effect – looks ultra premium */
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-  
-  transition: all 0.3s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 66px;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background 0.4s ease;
 }
 
+
+
+
+
 /* Make the navbar itself shorter/narrower */
+.navbar-wrapper.scrolled {
+  padding: 0.5rem 3rem;          /* ← Adds extra height on scroll */
+  background: rgba(0,0,0,0.8);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.navbar.scrolled {
+  padding-top: 20px;             /* ← Makes it drop down */
+}
+
 .navbar {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: -0.9rem 0.1rem;       /* ← This controls the height (was 1rem → now 0.7rem = narrower) */
   display: flex;
   align-items: center;
-  font-family: 'Montserrat', sans-serif;
   justify-content: space-between;
-  color: white;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0.4rem 3rem;
 }
 
 .logo {
@@ -159,104 +175,112 @@ section {
   100% { background-position: 0% 50%; }
 }
 
-/* Make it even bigger & bolder on desktop */
-@media (min-width: 900px) {
-  .gradient-title {
-    font-size: 1.6rem;
-  }
+
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* MENU */
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem;
+  margin: 0;
+  padding: 0;
 }
 
-/* Optional: make it even thinner on mobile */
-@media (max-width: 900px) {
-  .navbar {
-    padding: 0.6rem 1.5rem;
-  }
+.navbar-menu a {
+  color: #e0e0e0;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  position: relative;
+  transition: color 0.3s ease;
 }
 
+.navbar-menu a:hover {
+  color: #ffd700;
+}
 
+.navbar-menu a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -6px;
+  left: 0;
+  background: #ffd700;
+  transition: width 0.4s ease;
+}
 
+.navbar-menu a:hover::after {
+  width: 100%;
+}
 
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+}
 
-    @keyframes spin { to { transform: rotate(360deg); } }
+.hamburger .bar {
+  width: 30px;
+  height: 3px;
+  background: white;
+  border-radius: 3px;
+  transition: all 0.4s ease;
+}
 
-    /* Desktop menu */
-    nav ul {
-      display: flex;
-      list-style: none;
-      gap: 2.5rem;
-    }
+/* MOBILE MENU */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  height: 100vh;
+  width: 80%;
+  max-width: 350px;
+  background: rgba(15, 15, 15, 0.98);
+  backdrop-filter: blur(20px);
+  flex-direction: column;
+  padding: 120px 40px 60px;
+  transition: right 0.5s cubic-bezier(0.77, 0, 0.18, 1);
+  box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+}
 
-    nav a {
-      color: #adb5bd;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
+.mobile-menu.active {
+  right: 0;
+}
 
-    nav a:hover { color: #f8f9fa; }
+.mobile-menu a {
+  font-size: 1.6rem;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid rgba(255,215,0,0.1);
+}
 
-    /* Hamburger button - hidden on desktop */
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      gap: 6px;
-      cursor: pointer;
-      z-index: 100;
-    }
+/* HAMBURGER TO X */
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
 
-    .hamburger span {
-      width: 30px;
-      height: 3px;
-      background: white;
-      border-radius: 3px;
-      transition: all 0.3s;
-    }
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .desktop-menu { display: none; }
+  .hamburger { display: flex; }
+}
 
-    /* Mobile styles */
-    @media (max-width: 900px) {
-      .hamburger { display: flex; }
-
-      nav {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        height: 100vh;
-        width: 80%;
-        max-width: 350px;
-        background: rgba(0, 0, 0, 0.98);
-        backdrop-filter: blur(15px);
-        transition: right 0.4s cubic-bezier(0.77, 0, 0.18, 1);
-        padding-top: 100px;
-      }
-
-      nav.active { right: 0; }
-
-      nav ul {
-        flex-direction: column;
-        gap: 0;
-      }
-
-      nav li {
-        border-bottom: 1px solid rgba(255,255,255,0.1);
-      }
-
-      nav a {
-        display: block;
-        padding: 1.5rem 2rem;
-        font-size: 1.3rem;
-      }
-
-      /* Hamburger to X animation */
-      .hamburger.active .bar:nth-child(1) {
-        transform: translateY(9px) rotate(45deg);
-      }
-      .hamburger.active .bar:nth-child(2) {
-        opacity: 0;
-      }
-      .hamburger.active .bar:nth-child(3) {
-        transform: translateY(-9px) rotate(-45deg);
-      }
-    }
+@media (min-width: 993px) {
+  .mobile-menu { display: none; }
+}
 
 
 
@@ -318,7 +342,7 @@ section {
 .big5-centered {
   
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
@@ -392,7 +416,7 @@ section {
   font-weight: 900;
   line-height: 1.1;
   margin-bottom: 1rem;
-  margin-top: 180px;
+  margin-top: 220px;
   color: #ffff;
   text-shadow: 0 4px 20px rgba(0,0,0,0.8);
   -webkit-text-stroke: 0.9px #ffeb3b;     /* ← CHANGE THICKNESS + COLOR HERE */
@@ -461,12 +485,7 @@ section {
 /* Mobile adjustments */
 @media (max-width: 768px) {
 .hero-subtitle {
-    bottom: -180px;               /* ← Lower on mobile */
-    font-size: 1.2rem;
-    padding: 0 20px;
-    margin-left: 10px;
-    
-    margin-bottom: 20px;           /* ← Less space below subtitle */
+  display: none;
   
   }
   .btn-primary, .btn-secondary { width: 280px; }
@@ -474,8 +493,7 @@ section {
 
 @media (max-width: 480px) {
   .hero-subtitle {
-    bottom: -7%;
-    font-size: 1.1rem;
+  display: none;
   }
 
      .big5-centered {
@@ -1148,67 +1166,20 @@ section {
 }
 
 /* ====== FIX TOUR GALLERY LEFT CUT OFF ON MOBILE ====== */
-@media (max-width: 992px) {
-  .tour-card-link {
-    flex: 0 0 calc(50% - 15px);
-    max-width: calc(50% - 15px);
-  }
-  .tour-image-wrapper { height: 260px; }
-}
+
 
 @media (max-width: 768px) {
-  /* Remove heavy side padding — let container handle it */
-  .tour-slider-wrapper {
-    padding: 0 20px;               /* ← Reduced — safe space for arrows */
-    box-sizing: border-box;
-  }
-
-  .tour-gallery-container {
-    overflow: hidden;              /* ← CRITICAL: Prevents left cut off */
-    border-radius: 20px;           /* ← Optional: nice rounded container */
-  }
-
-  .tour-gallery {
-    padding-left: 0;
-    margin-left: 0;
-  }
+ 
 
   .slider-arrow {
-    width: 44px;
-    height: 44px;
-    background: rgba(255,255,255,0.9);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  display: none;
   }
 
-  .arrow-icon {
-    width: 16px;
-    height: 16px;
-  }
 
-  .left-arrow { left: 10px; }
-  .right-arrow { right: 10px; }
-
-  .tour-overlay { padding: 40px 18px 18px; }
-  .tour-overlay h3 { font-size: 1.25rem; }
 }
 
 @media (max-width: 576px) {
-  .tour-slider-wrapper {
-    padding: 0 10px;               /* ← Minimal padding */
-  }
 
-  .tour-card-link {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-
-  .tour-image-wrapper {
-    height: 320px;                 /* ← Slightly taller for mobile */
-  }
-
-  .slider-arrow {
-    display: none;                 /* ← Hide arrows on very small screens */
-  }
 }
 
 
@@ -3733,14 +3704,16 @@ section {
       margin: 0 auto;
     }
 
-    .contact-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: start;
-    }
+/* ====== CONTACT CONTAINER — PERFECTLY CENTERED ON MOBILE ====== */
+.contact-container {
+  max-width: 999px;
+  margin: 0 auto;                /* ← Centers it */
+  padding: 0 20px;               /* ← Balanced side padding */
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+}
 
     .contact-info {
       background: rgba(255, 255, 255, 0.08);
@@ -3771,13 +3744,13 @@ section {
     }
 
     .info-item div h3 {
-      font-size: 1.4rem;
+      font-size: 1.1rem;
       margin-bottom: 8px;
       color: #fff;
     }
 
     .info-item div p {
-      font-size: 1.1rem;
+      font-size: 1rem;
       opacity: 0.9;
       line-height: 1.6;
     }
@@ -3907,9 +3880,19 @@ section {
     /* Mobile */
     @media (max-width: 992px) {
       .contact-container {
+        max-width: 600px;
         grid-template-columns: 1fr;
         gap: 60px;
+        /* Reset any left/right bias */
+        margin-left: auto !important;
+        margin-right: auto !important;
+    
+    /* Force centering */
+        display: block !important;
+        margin: 0 auto !important;
       }
+
+      
       .contact-info, .contact-form-wrapper {
         padding: 50px 40px;
       }
@@ -3923,3 +3906,4 @@ section {
         padding: 40px 30px;
       }
     }
+
