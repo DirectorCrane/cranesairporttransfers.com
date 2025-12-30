@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Airport Shuttle Service | Cranes Transfers</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header class="navbar-wrapper">
+  <!-- FLOATING BLACK SHINY DOTS BACKGROUND -->
+  <div class="floating-dots-container"></div>
+
+  <div class="navbar">
+    <div class="logo">
+      <img src="images/logo.png" alt="Cranes Airport Transfers Logo" class="rotating-logo">
+      <!-- Animated Gradient Text -->
+      <h1 class="Gtitle">Cranes Airport Transfers & Tours</h1>
+    </div>
+
+    <!-- Hamburger Icon -->
+    <div class="hamburger" id="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+
+    <nav id="nav-menu">
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="airport-transfer.html">AIRPORT TRANSFER</a></li>
+        <li><a href="aboutus.html">ABOUT US</a></li>
+        <li><a href="tours.html">TOURS</a></li>
+        <li><a href="contact.html">CONTACT US</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+
+  <!-- HERO WITH FULL BACKGROUND -->
+  <section class="tour-detail-hero">
+    <div class="airport"></div>
+    <div class="tour-detail-content">
+      <h1 class="tour-detail-title">Airport Shuttle Service</h1>
+      <p style="font-size:1.3rem; opacity:1.95;">
+        Your trusted ride from Hosea Kutako International Airport to Windhoek<br>
+        Safe • Comfortable • Stress-Free Arrival
+      </p>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <section class="tour-itinerary">
+    <div class="container">
+            <!-- GLITCH HEADING -->
+<div class="glitch-heading-wrapper">
+      <h2 class="glitch-heading gradient-glitch" data-text="Tour Highlights">
+    Stress-Free Airport Transfers
+  </h2>
+  </div>
+  
+      <p style="font-size:1.2rem; max-width:800px; margin:20px auto; line-height:1.7; color:#444;">
+        Arrive in Namibia with peace of mind. Our professional drivers meet you at Hosea Kutako International Airport 
+        (40 km east of Windhoek) and take you directly to your hotel, guesthouse, or Airbnb in the city. 
+        No waiting, no stress just a warm Namibian welcome.
+      </p>
+
+      <div class="highlights-grid">
+        <div class="highlight-card">
+          <i class="fas fa-clock"></i>
+          <h3>Reliable Timing</h3>
+          <p>On-time pickup, every time we monitor your flight.</p>
+        </div>
+        <div class="highlight-card">
+          <i class="fas fa-car"></i>
+          <h3>Comfortable Vehicles</h3>
+          <p>Clean, modern, air-conditioned cars for a smooth ride.</p>
+        </div>
+        <div class="highlight-card">
+          <i class="fas fa-smile"></i>
+          <h3>Friendly Local Drivers</h3>
+          <p>Knowledgeable guides who share tips about Windhoek and Namibia.</p>
+        </div>
+        <div class="highlight-card">
+          <i class="fas fa-suitcase"></i>
+          <h3>Safe Luggage Handling</h3>
+          <p>Your belongings are secure we treat them like our own.</p>
+        </div>
+        <div class="highlight-card">
+          <i class="fas fa-dollar-sign"></i>
+          <h3>Transparent Pricing</h3>
+          <p>No hidden fees affordable rates with no surprises.</p>
+        </div>
+        <div class="highlight-card">
+          <i class="fas fa-shield-alt"></i>
+          <h3>Fully Insured</h3>
+          <p>Travel with confidence complete safety coverage.</p>
+        </div>
+      </div>
+
+      
+    </div>
+  </section>
+
+  
+
+<!-- ====== AIRPORT TRANSFER QUOTE FORM WITH STARRY BG + GLASS EFFECT ====== -->
+<!-- ====== SMART AIRPORT TRANSFER QUOTE FORM ====== -->
+<section class="transfer-form-section">
+  <div class="transfer-bg"></div>
+  <div class="container">
+    <h2>Book Your Airport Transfer</h2>
+    <p style="text-align:center; max-width:700px; margin:20px auto; color:#ffffff;">
+      Fast, transparent pricing no surprises. Children (0-12) 35% off
+    </p>
+
+<form     action="https://formspree.io/f/mvzoqkjr" 
+  method="POST" 
+  id="transferQuoteForm" 
+  class="transfer-form"
+>
+  <!-- STEP 1 -->
+  <div class="transfer-form-group">
+    <label for="pickup">Pickup Location</label>
+    <input type="text" name="pickup" id="pickup" placeholder="Start typing..." required list="pickup-suggestions">
+      <datalist id="pickup-suggestions">
+      <option value="Hosea Kutako International Airport"> <!-- First & default -->
+      <option value="Eros Airport">
+      <option value="Windhoek City Center">
+      </datalist>
+  </div>
+
+  <div class="transfer-form-group">
+    <label for="dropoff">Drop-off Location</label>
+    <input type="text" name="dropoff" id="dropoff" placeholder="Hotel, guesthouse, or address" required list="dropoff-suggestions">
+    <datalist id="dropoff-suggestions">
+          <option value="Windhoek City Center">
+          <option value="Avani Windhoek Hotel">
+          <option value="Hilton Windhoek">
+          <option value="Hotel Thule">
+          <option value="Olive Grove Guesthouse">
+          <option value="Arebbusch Travel Lodge">
+          <option value="River Crossing Lodge">
+          <option value="Other (specify in notes)">
+    </datalist>
+  </div>
+
+  <div class="form-row">
+    <div class="transfer-form-group">
+      <label for="date">Pickup Date</label>
+      <input type="date" name="date" id="date" required>
+    </div>
+    <div class="transfer-form-group">
+      <label for="time">Pickup Time</label>
+      <input type="time" name="time" id="time" required>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="transfer-form-group">
+      <label for="adults">Adults</label>
+      <input type="number" name="adults" id="adults" min="1" value="1" required>
+    </div>
+    <div class="transfer-form-group">
+      <label for="children">Children (0-12 years)</label>
+      <input type="number" name="children" id="children" min="0" value="0">
+    </div>
+  </div>
+
+        <!-- CALCULATE BUTTON -->
+  <button type="button" id="calculateBtn" class="calculate-btn">
+  Calculate Cost
+  </button>
+
+  <!-- COST RESULT -->
+  <div id="costResult" class="cost-result hidden">
+    <div class="cost-summary">
+    <p class="total-cost-large">
+      Total Cost: <strong>N$<span id="totalAmount">0</span></strong>
+    </p>
+    </div>
+    <div class="transfer-form-group">
+      <label for="fullName">Full Name *</label>
+      <input type="text" name="fullname" id="fullName" required>
+    </div>
+    <div class="transfer-form-group">
+      <label for="email">Email *</label>
+      <input type="email" name="email" id="email" required>
+    </div>
+    <div class="transfer-form-group">
+      <label for="phone">Phone (International format) *</label>
+      <input type="tel" name="phone" id="phone" placeholder="+264..." required>
+    </div>
+    <div class="transfer-form-group">
+      <label for="flight">Flight Number</label>
+      <input type="text" name="flight" id="flight" placeholder="e.g. SW723">
+    </div>
+    <div class="transfer-form-group">
+      <label for="notes">Additional Notes</label>
+      <textarea id="notes" rows="3" placeholder="Luggage details, special requests..."></textarea>
+    </div>
+      <label class="terms-checkbox">
+      <input type="checkbox" id="terms"  name="terms_agreed" required>
+      I agree to the <a href="terms.html" target="_blank">Terms and Conditions</a>
+     </label>
+
+        <button type="submit" class="submit-btn">Confirm Booking</button>
+  </div>
+</form>
+
+
+  </div>
+</section>
+
+
+
+<!-- ====== BEAUTIFUL FOOTER ====== -->
+<footer class="site-footer">
+  <!-- SUBTLE BACKGROUND PATTERN -->
+  <div class="footer-bg"></div>
+
+  <!-- DANCING ZEBRAS -->
+  <img src="images/DancingZebraLeft.png" alt="Dancing Zebra Left" class="zebra-left">
+  <img src="images/DancingZebraRight.png" alt="Dancing Zebra Right" class="zebra-right">
+
+  <div class="footer-container">
+    <!-- COMPANY HEADER — TOP CENTER -->
+    <div class="footer-header">
+      <div class="footer-logo-wrapper">
+        <img src="images/logo.png" alt="Cranes Airport Transfers Logo" class="rotating-logo">
+      </div>
+      <p class="footer-tagline">
+        Your trusted partner for luxury airport transfers and unforgettable safari tours across Namibia.
+      </p>
+    </div>
+
+    <!-- MAIN GRID — LINKS & SOCIAL -->
+    <div class="footer-main-grid">
+      <!-- QUICK LINKS -->
+      <div class="footer-section links-section">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="airport-transfer.html">Airport Transfer</a></li>
+          <li><a href="tours.html">Tours</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="donation.html">Support Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- CONTACT INFO -->
+      <div class="footer-section contact-section">
+        <h4>Contact Us</h4>
+        <div class="contact-item">
+          <i class="fas fa-phone-alt"></i>
+          <a href="tel:+264816254987">+264 81 625 4987</a>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:info@cranesairporttransfers.com">info@cranesairporttransfers.com</a>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Windhoek, Namibia</span>
+        </div>
+      </div>
+
+      <!-- SOCIAL -->
+      <div class="footer-section social-section">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/cranesairporttransfers" target="_blank" class="social-icon facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://instagram.com/cranes_airport_transfers" target="_blank" class="social-icon instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://wa.me/264816254987" target="_blank" class="social-icon whatsapp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+        <p class="social-text">Join us for exclusive offers & Namibia adventures!</p>
+      </div>
+    </div>
+
+    <!-- COPYRIGHT -->
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> Cranes Airport Transfers & Tours. All rights reserved.</p>
+      <p class="credits">Designed with ❤️ for Namibia</p>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP STICKY BUTTON -->
+<a href="https://wa.me/264816254987?text=Hey%20there%21%20%F0%9F%91%8B%0AI'd%20like%20to%20make%20an%20airport%20transfer%20booking%20on%20__________%202026.%0ACan%20you%20help%20me%20with%20availability%20and%20pricing%3F" class="whatsapp-btn">
+  <img src="images/WhatsApp.png" alt="WhatsApp" class="whatsapp-icon">
+</a>
+
+  <!-- GALLERY JS (same as tour pages) -->
+  <script>
+    // Paste your auto-sliding gallery JS here
+  </script>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('nav-menu');
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+  });
+
+  // Close menu when clicking a link (nice UX on mobile)
+  document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      navMenu.classList.remove('active');
+    });
+  });
+</script>
+
+    <script>
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) {
+    document.querySelector('.navbar-wrapper').style.cssText += `
+      padding: 0.4rem 0;
+      background: rgba(0,0,0,0.98) !important;
+      backdrop-filter: blur(20px);
+    `;
+  } else {
+    document.querySelector('.navbar-wrapper').style.cssText = `
+      padding: initial;
+      background: rgba(10,10,10,0.80);
+      backdrop-filter: blur(15px);
+    `;
+  }
+});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const container = document.querySelector('.floating-dots-container');
+  if (!container) return;
+
+  const DOT_COUNT = 35;  // ← adjust for density
+
+  for (let i = 0; i < DOT_COUNT; i++) {
+    const dot = document.createElement('div');
+    dot.className = 'floating-dot';
+
+    // Random size: 1–4px
+    const size = 1 + Math.random() * 3;
+    dot.style.width = size + 'px';
+    dot.style.height = size + 'px';
+
+    // Random starting position inside navbar
+    dot.style.left = Math.random() * 100 + '%';
+    dot.style.top = Math.random() * 100 + '%';
+
+    // Random drift distance & scale
+    const dx = (Math.random() - 0.5) * 300;   // -150 to +150px horizontal
+    const dy = (Math.random() - 0.5) * 200;   // -100 to +100px vertical
+    const scale = 0.8 + Math.random() * 0.6;  // 0.8–1.4
+
+    dot.style.setProperty('--dx', dx + 'px');
+    dot.style.setProperty('--dy', dy + 'px');
+    dot.style.setProperty('--scale', scale);
+
+    // Random duration: 15–35 seconds for slow, dreamy float
+    const duration = 15 + Math.random() * 20;
+    dot.style.animationDuration = duration + 's';
+
+    // Random delay for staggered start
+    dot.style.animationDelay = Math.random() * 5 + 's';
+
+    container.appendChild(dot);
+  }
+});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const calculateBtn = document.getElementById('calculateBtn');
+  const costResult = document.getElementById('costResult');
+  const totalAmount = document.getElementById('totalAmount');
+  const section = document.querySelector('.transfer-form-section');
+
+  calculateBtn.addEventListener('click', () => {
+    const adults = parseInt(document.getElementById('adults').value) || 0;
+    const children = parseInt(document.getElementById('children').value) || 0;
+
+    const basePrice = 450;
+
+    // Adults: 22% off if 2 or more
+    const adultPrice = adults >= 2 ? basePrice * 0.78 : basePrice;
+    const totalAdults = adults * adultPrice;
+
+    // Children: always 35% off
+    const childPrice = basePrice * 0.65;
+    const totalChildren = children * childPrice;
+
+    // Grand total
+    const grandTotal = totalAdults + totalChildren;
+
+    // Update display
+    totalAmount.textContent = grandTotal.toFixed(0);
+
+    // Show result + gradient
+    costResult.classList.remove('hidden');
+    section.classList.add('calculated');
+    costResult.scrollIntoView({ behavior: 'smooth' });
+  });
+});
+</script>
+
+
+</body>
+</html>

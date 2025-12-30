@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>All Tours | Namibia Adventures</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Add your fonts, favicon, etc. -->
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Shared CSS -->
+  <link rel="stylesheet" href="style.css">
+
+
+
+
+</head>
+<body>
+
+  
+
+
+  <!-- ==================== NAVBAR (same as home) ==================== -->
+  </head>
+<body>
+
+<header class="navbar-wrapper">
+  <!-- FLOATING BLACK SHINY DOTS BACKGROUND -->
+  <div class="floating-dots-container"></div>
+
+  <div class="navbar">
+    <div class="logo">
+      <img src="images/logo.png" alt="Cranes Airport Transfers Logo" class="rotating-logo">
+      <!-- Animated Gradient Text -->
+      <h1 class="Gtitle">Cranes Airport Transfers & Tours</h1>
+    </div>
+
+    <!-- Hamburger Icon -->
+    <div class="hamburger" id="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+
+    <nav id="nav-menu">
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="airport-transfer.html">AIRPORT TRANSFER</a></li>
+        <li><a href="aboutus.html">ABOUT US</a></li>
+        <li><a href="tours.html">TOURS</a></li>
+        <li><a href="contact.html">CONTACT US</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+  <!-- ====== ALL TOURS SECTION ====== -->
+<section class="all-tours-section">
+  <h1 class="page-title" style="text-align:center; font-size:3rem; margin:60px 0 20px;">All Namibian Tours</h1>
+  <p class="page-subtitle" style="text-align:center; color:#555; margin-bottom:50px;">
+    Explore Namibia’s wonders — from ancient deserts to vibrant cities.
+  </p>
+
+  <!-- FILTER BAR -->
+  <div class="filter-bar" style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-bottom:50px;">
+    <input type="text" id="searchInput" placeholder="Search tour name…" style="padding:12px; border-radius:8px; border:1px solid #ddd; min-width:200px;">
+    <select id="destFilter" style="padding:12px; border-radius:8px; border:1px solid #ddd; min-width:180px;">
+      <option value="">All Destinations</option>
+      <option value="Windhoek">Windhoek</option>
+      <option value="Swakopmund">Swakopmund</option>
+      <option value="Fish River Canyon">Fish River Canyon</option>
+      <option value="Sossusvlei">Sossusvlei</option>
+      <option value="Sandwich Harbour">Sandwich Harbour</option>
+    </select>
+    <select id="durationFilter" style="padding:12px; border-radius:8px; border:1px solid #ddd; min-width:160px;">
+      <option value="">Any Duration</option>
+      <option value="3 Hours">3 Hours</option>
+      <option value="1 Day">1 Day</option>
+    </select>
+    <button id="applyFilters" style="background:#2ecc71; color:white; border:none; padding:12px 24px; border-radius:8px; cursor:pointer;">Apply</button>
+  </div>
+
+<div class="tours-grid">
+
+  <!-- TOUR 1 -->
+  <a href="tour-cityofwindhoek.html" class="tour-item">
+    <img src="images/CityOfWindhoek.jpg" alt="Day Trip in the City of Many Faces" class="tour-full-image" loading="lazy">
+    <div class="tour-overlay">
+      <h3>Day Trip in the City of Many Faces</h3>
+      <div class="tour-info-row">
+        <span><span class="icon calendar-icon"></span> 3 Hours</span>
+        <span><span class="icon location-icon"></span> Windhoek</span>
+      </div>
+      <button class="more-info-btn">View Details</button>
+    </div>
+  </a>
+
+
+
+  <!-- TOUR 2 -->
+  <a href="tour-swakopmund.html" class="tour-item">
+    <img src="images/Swakop.jpg" alt="Explore Our Desert Town" class="tour-full-image" loading="lazy">
+    <div class="tour-overlay">
+      <h3>Come Explore Our Desert Town</h3>
+      <div class="tour-info-row">
+        <span><span class="icon calendar-icon"></span> 2 Day</span>
+        <span><span class="icon location-icon"></span> Swakopmund</span>
+      </div>
+      <button class="more-info-btn">View Details</button>
+    </div>
+  </a>
+
+  <!-- TOUR 3 -->
+  <a href="tour-fishriver.html" class="tour-item">
+    <img src="images/FishRiverCanyon.jpg" alt="Fish River Canyon Day Trip" class="tour-full-image" loading="lazy">
+    <div class="tour-overlay">
+      <h3>Fish River Canyon Day Trip</h3>
+      <div class="tour-info-row">
+        <span><span class="icon calendar-icon"></span> 1 Day</span>
+        <span><span class="icon location-icon"></span> Fish River Canyon</span>
+      </div>
+      <button class="more-info-btn">View Details</button>
+    </div>
+  </a>
+
+  <!-- TOUR 4 -->
+  <a href="tour-sossusvlei.html" class="tour-item">
+    <img src="images/sosStars.jpg" alt="Oldest Trees of the Desert" class="tour-full-image" loading="lazy">
+    <div class="tour-overlay">
+      <h3>Plan a Trip to See the Oldest Trees of the Desert</h3>
+      <div class="tour-info-row">
+        <span><span class="icon calendar-icon"></span> 1 Day</span>
+        <span><span class="icon location-icon"></span> Sossusvlei</span>
+      </div>
+    
+      <button class="more-info-btn">View Details</button>
+    </div>
+  </a>
+
+  <!-- TOUR 5 - RENAMED -->
+  <a href="tour-sandwichharbour.html" class="tour-item">
+    <img src="images/OceanAndSea.jpg" alt="Guided Tour to Sandwich Harbour" class="tour-full-image" loading="lazy">
+    <div class="tour-overlay">
+      <h3>Guided Tour to Sandwich Harbour</h3>
+      <div class="tour-info-row">
+        <span><span class="icon calendar-icon"></span> 1 Day</span>
+        <span><span class="icon location-icon"></span> Sandwich Harbour</span>
+      </div>
+      <button class="more-info-btn">View Details</button>
+    </div>
+  </a>
+
+    <!-- TOUR 6 - RENAMED -->
+  <a href="tour-etosha.html" class="tour-item">
+    <img src="images/Etosha.jpg" alt="Guided Tour to Etosha" class="tour-full-image" loading="lazy">
+    <div class="tour-overlay">
+      <h3>Guided Tour to Ethosha Pan</h3>
+      <div class="tour-info-row">
+        <span><span class="icon calendar-icon"></span> 1 Day</span>
+        <span><span class="icon location-icon"></span> Ethosha</span>
+      </div>
+      <button class="more-info-btn">View Details</button>
+    </div>
+  </a>
+
+  
+
+</div>
+
+  
+
+  <!-- LOAD MORE BUTTON -->
+<div class="load-more-wrapper" style="text-align:center; margin:60px 0;">
+    <button class="load-more-btn" id="loadMore">Load More</button>
+  </div>
+</section>
+
+
+
+
+
+  <!-- ====== FOOTER (Optional — same as homepage) ====== -->
+<!-- === FOOTER WITH SOCIAL LINKS === -->
+<!-- ====== BEAUTIFUL FOOTER ====== -->
+<footer class="site-footer">
+  <!-- SUBTLE BACKGROUND PATTERN -->
+  <div class="footer-bg"></div>
+
+  <!-- DANCING ZEBRAS -->
+  <img src="images/DancingZebraLeft.png" alt="Dancing Zebra Left" class="zebra-left">
+  <img src="images/DancingZebraRight.png" alt="Dancing Zebra Right" class="zebra-right">
+
+  <div class="footer-container">
+    <!-- COMPANY HEADER — TOP CENTER -->
+    <div class="footer-header">
+      <div class="footer-logo-wrapper">
+        <img src="images/logo.png" alt="Cranes Airport Transfers Logo" class="rotating-logo">
+      </div>
+      <p class="footer-tagline">
+        Your trusted partner for luxury airport transfers and unforgettable safari tours across Namibia.
+      </p>
+    </div>
+
+    <!-- MAIN GRID — LINKS & SOCIAL -->
+    <div class="footer-main-grid">
+      <!-- QUICK LINKS -->
+      <div class="footer-section links-section">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="airport-transfer.html">Airport Transfer</a></li>
+          <li><a href="tours.html">Tours</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="donation.html">Support Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- CONTACT INFO -->
+      <div class="footer-section contact-section">
+        <h4>Contact Us</h4>
+        <div class="contact-item">
+          <i class="fas fa-phone-alt"></i>
+          <a href="tel:+264816254987">+264 81 625 4987</a>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:info@cranesairporttransfers.com">info@cranesairporttransfers.com</a>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Windhoek, Namibia</span>
+        </div>
+      </div>
+
+      <!-- SOCIAL -->
+      <div class="footer-section social-section">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/cranesairporttransfers" target="_blank" class="social-icon facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://instagram.com/cranes_airport_transfers" target="_blank" class="social-icon instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://wa.me/264816254987" target="_blank" class="social-icon whatsapp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+        <p class="social-text">Join us for exclusive offers & Namibia adventures!</p>
+      </div>
+    </div>
+
+    <!-- COPYRIGHT -->
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> Cranes Airport Transfers & Tours. All rights reserved.</p>
+      <p class="credits">Designed with ❤️ for Namibia</p>
+    </div>
+  </div>
+</footer>
+
+  <script src="script.js"></script>
+
+  <script>
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) {
+    document.querySelector('.navbar-wrapper').style.cssText += `
+      padding: 0.4rem 0;
+      background: rgba(0,0,0,0.98) !important;
+      backdrop-filter: blur(20px);
+    `;
+  } else {
+    document.querySelector('.navbar-wrapper').style.cssText = `
+      padding: initial;
+      background: rgba(10,10,10,0.80);
+      backdrop-filter: blur(15px);
+    `;
+  }
+});
+</script>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('nav-menu');
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+  });
+
+  // Close menu when clicking a link (nice UX on mobile)
+  document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      navMenu.classList.remove('active');
+    });
+  });
+</script>
+
+
+
+
+
+
+  <script>
+  // Mobile menu toggle
+  const toggle = document.querySelector('.mobile-toggle');
+  const nav = document.querySelector('.nav');
+
+  toggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
+    toggle.textContent = nav.classList.contains('active') ? 'Close' : 'Menu';
+  });
+
+  // Close menu when clicking a link
+  document.querySelectorAll('.nav a').forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('active');
+      toggle.textContent = 'Menu';
+    });
+  });
+
+  // Add scrolled class
+  window.addEventListener('scroll', () => {
+    document.querySelector('.header').classList.toggle('scrolled', window.scrollY > 50);
+  });
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const container = document.querySelector('.floating-dots-container');
+  if (!container) return;
+
+  const DOT_COUNT = 35;  // ← adjust for density
+
+  for (let i = 0; i < DOT_COUNT; i++) {
+    const dot = document.createElement('div');
+    dot.className = 'floating-dot';
+
+    // Random size: 1–4px
+    const size = 1 + Math.random() * 3;
+    dot.style.width = size + 'px';
+    dot.style.height = size + 'px';
+
+    // Random starting position inside navbar
+    dot.style.left = Math.random() * 100 + '%';
+    dot.style.top = Math.random() * 100 + '%';
+
+    // Random drift distance & scale
+    const dx = (Math.random() - 0.5) * 300;   // -150 to +150px horizontal
+    const dy = (Math.random() - 0.5) * 200;   // -100 to +100px vertical
+    const scale = 0.8 + Math.random() * 0.6;  // 0.8–1.4
+
+    dot.style.setProperty('--dx', dx + 'px');
+    dot.style.setProperty('--dy', dy + 'px');
+    dot.style.setProperty('--scale', scale);
+
+    // Random duration: 15–35 seconds for slow, dreamy float
+    const duration = 15 + Math.random() * 20;
+    dot.style.animationDuration = duration + 's';
+
+    // Random delay for staggered start
+    dot.style.animationDelay = Math.random() * 5 + 's';
+
+    container.appendChild(dot);
+  }
+});
+</script>
+
+<script>
+  // === HIGHLIGHT ACTIVE NAV LINK ON SCROLL & PAGE LOAD ===
+  const navLinks = document.querySelectorAll('.navbar a');
+  const sections = document.querySelectorAll('section[id]');
+
+  function setActiveLink() {
+    let current = '';
+    sections.forEach(section => {
+      const rect = section.getBoundingClientRect();
+      if (rect.top <= 150 && rect.bottom >= 150) {
+        current = section.getAttribute('id');
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      const href = link.getAttribute('href');
+      if (href === `#${current}` || (current === '' && href === 'tours.html')) {
+        link.classList.add('active');
+      }
+    });
+  }
+
+  // Run on load and scroll
+  window.addEventListener('load', () => {
+    setActiveLink();
+    // Force "Tours" active on tours.html
+    document.querySelector('a[href="tours.html"]').classList.add('active');
+  });
+  window.addEventListener('scroll', setActiveLink);
+
+  // Optional: Click also updates
+  navLinks.forEach(link => link.addEventListener('click', setActiveLink));
+</script>
+
+<script>
+  // === NAVBAR SHRINK ON SCROLL ===
+  window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar');
+    const html = document.documentElement;
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+      html.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+      html.classList.remove('scrolled');
+    }
+  });
+</script>
+
+
+
+
+
+
+</body>
+</html>
