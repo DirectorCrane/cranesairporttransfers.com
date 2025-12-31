@@ -107,13 +107,13 @@ section {
   top: 0;
   left: 0;
   right: 0;
-  height: 66px;
+  background: #000000;           /* ← PURE BLACK */
+  border-bottom: 1px solid rgba(255, 215, 0, 0.2); /* subtle gold line */
+  height: 70px;                  /* ← NARROW HEIGHT */
   z-index: 1000;
-  background: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  transition: background 0.4s ease;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
 }
 
 
@@ -132,18 +132,20 @@ section {
 }
 
 .navbar {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0.4rem 3rem;
+  height: 100%;
 }
 
 .logo {
       display: flex;
       align-items: center;
-      margin-left: 30px;
+      margin-left: -20px;
       gap: 12px;
       font-size: 1.5rem;
       font-weight: bold;
@@ -920,13 +922,19 @@ section {
 /* === SLIDER WRAPPER === */
 /* move the entire slider up a bit (tweak value to taste) */
 /* === SMOOTH ARROWS — PERFECTLY CENTERED === */
+/* Base container */
 .tour-slider-wrapper {
-  position: relative;           /* ← THIS IS KEY — makes arrows position relative to slider */
-  margin: 0 auto 60px;;
-  margin-top: 10px; /* change this value to raise/lower the slider */
+  position: relative;
+  padding: 0 20px;                /* Safe side space for larger phones */
+  margin: 0 auto;
+  max-width: 100%;
   overflow: hidden;
-  padding: 0 70px;               /* space for arrows */
+}
+
+.tour-gallery-container {
+  overflow: hidden;
   border-radius: 20px;
+  margin: 0 auto;
 }
 
 
@@ -1168,18 +1176,31 @@ section {
 /* ====== FIX TOUR GALLERY LEFT CUT OFF ON MOBILE ====== */
 
 
-@media (max-width: 768px) {
- 
-
-  .slider-arrow {
-  display: none;
+/* MOBILE — 1 CARD, FULL WIDTH, NO CUT OFF */
+/* === RESPONSIVE === */
+@media (max-width: 992px) {
+  .tour-card-link {
+    flex: 0 0 calc(50% - 15px);
+    max-width: calc(50% - 15px);
   }
+  .tour-image-wrapper { height: 260px; }
+}
 
-
+@media (max-width: 768px) {
+  .tour-slider-wrapper { padding: 0 55px; }
+  .slider-arrow { width: 48px; height: 48px; }
+  .arrow-icon { width: 18px; height: 18px; }
+  .tour-overlay { padding: 40px 18px 18px; }
+  .tour-overlay h3 { font-size: 1.25rem; }
 }
 
 @media (max-width: 576px) {
-
+  .tour-card-link {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .tour-image-wrapper { height: 300px; }
+  .slider-arrow { display: none; }
 }
 
 
@@ -3745,6 +3766,7 @@ section {
 
     .info-item div h3 {
       font-size: 1.1rem;
+      
       margin-bottom: 8px;
       color: #fff;
     }
