@@ -187,13 +187,11 @@ section {
 
 
 /* ====== DESKTOP MENU — SHIFTED RIGHT ====== */
-.navbar-menu.desktop-menu {
-  margin-left: auto;             /* ← Moves the whole menu block to the far right */
-  margin-right: 40px; /* optional breathing room from edge */
+/* MENU */
+.navbar-menu {
   display: flex;
-  align-items: center;
-  gap: 2.5rem;
   list-style: none;
+  gap: 2.5rem;
   margin: 0;
   padding: 0;
 }
@@ -356,7 +354,7 @@ section {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
-  width: 799px;          /* ←←← CHANGE THIS NUMBER ONLY */
+  width: 599px;          /* ←←← CHANGE THIS NUMBER ONLY */
   pointer-events: none;  /* so people can still click buttons */
 }
 
