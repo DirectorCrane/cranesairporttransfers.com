@@ -215,7 +215,7 @@
   <nav class="navbar">
     <!-- LOGO — CLICKABLE HOME -->
     <a href="index.html" class="logo">
-      <img src="images/logo.png" alt="Cranes Airport Transfers Logo" class="rotating-logo">
+      <img src="images/logo.png" alt="Cranes Airport Transfers Logo" class="rotating-logo" loading="lazy">
       <span class="Gtitle">Cranes Airport Transfers & Tours</span>
     </a>
 
@@ -255,9 +255,12 @@
   <div class="hero-overlay"></div>
 
   <!-- Big 5 Image -->
-  <div class="big5-centered">
-    <img src="images/big5clean.png" alt="The Big 5" class="big5-image">
-  </div>
+ <div class="big5-centered">
+  <picture>
+    <source srcset="/images/big5clean.webp" type="image/webp">
+    <img src="/images/big5clean.png" alt="The Big 5" class="big5-image" loading="lazy">
+  </picture>
+</div>
 
   <!-- Text & Content -->
   <div class="hero-content">
